@@ -4,19 +4,55 @@
         <title>Lab 7: Nyan Cat</title>
     </head>
     
+	<canvas id="canvas" width="500" height="500">
+			Update your browser!
+	</canvas>
+	
     <body>
         
+		
         <script>
         
             var canvas=document.getElementById("canvas");
             var c=canvas.getContext('2d');
-            
-            
-        </script>
+			
+			//BACKGROUND
+			c.fillStyle="#2E74B6";
+			c.fillRect(0, 0, 400, 330);
+			
+			//RAINBOW
+			c.fillStyle="red";
+			c.fillRect(0, 125, 200, 20);
+			
+			c.fillStyle="orange";
+			c.fillRect(0, 145, 200, 20);
+			
+			c.fillStyle="yellow";
+			c.fillRect(0, 165, 200, 20);
+			
+			c.fillStyle="green";
+			c.fillRect(0, 185, 200, 20);
+			
+			c.fillStyle="blue";
+			c.fillRect(0, 205, 200, 20);
+			
+			c.fillStyle="purple";
+			c.fillRect(0, 225, 200, 20);
+			
+			//STARS
+			c.fillStyle="white";
+			c.fillRect=(30, 30, 20, 20);
 		
-		<canvas id="canvas" width="500" height="500">
-			Update your browser!
-		</canvas>
+			//https://stackoverflow.com/questions/3868259/importing-image-on-canvas-html5
+			var img=new Image();
+			img.onload = function() {
+				var ca=document.getElementById('canvas').getContext('2d');
+				ca.drawImage(img, 100, 100);
+			}
+			img.src = 'nyan.gif';
+            
+			
+        </script>
         
     </body>
 </html>
