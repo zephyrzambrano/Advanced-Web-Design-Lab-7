@@ -12,8 +12,47 @@
         
         <script>
         
-            var canvas=document.getElementById("can");
+            var canvas=document.getElementById("canvas");
             var c=canvas.getContext('2d');
+			
+			//BACKGROUND
+			c.beginPath();
+			c.strokeStyle="#ffbf00";
+			c.lineWidth=20;
+			c.arc(200, 150, 100, 0, 2*Math.PI);
+			c.stroke();
+			c.fillStyle="#ffbf00";
+			c.fill();
+			
+			
+			//EYES
+			//left eye
+			c.beginPath();
+			c.strokeStyle="white";
+			c.lineWidth=20;
+			c.arc(160, 110, 10, 0, 2*Math.PI);
+			c.stroke();
+			c.fillStyle="white";
+			c.fill();
+			
+			//right eye
+			c.beginPath();
+			c.strokeStyle="white";
+			c.lineWidth=20;
+			c.arc(240, 110, 10, 0, 2*Math.PI);
+			c.stroke();
+			c.fillStyle="white";
+			c.fill();
+			
+			
+			//MOUTH
+			c.beginPath();
+			c.strokeStyle="white";
+			c.lineWidth=20;
+			c.arc(200, 165, 50, 0, Math.PI);
+			c.stroke();
+			c.fillStyle="white";
+			c.fill();
             
         </script>
         
