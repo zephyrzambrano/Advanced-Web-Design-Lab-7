@@ -3,25 +3,19 @@
     <head>
         <title>Lab 7: Hello World!</title>
     </head>
-    
+    <canvas id="myCanvas" width="300" height="150" >
+Your browser does not support the HTML5 canvas tag.</canvas>
     <body>
 		
         <script>
-        
-            var canvas=document.getElementById("canvas");
-            var c=canvas.getContext("2d");
-			
-			c.font="bold 30pt Calibri";
-			c.fillStyle="#0000FF";
-			c.fillText(“Hello World!”,250,250);
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
 
+        ctx.font = "30px Georgia";
+        ctx.fillText("Hello World!", 50, 100);
             
-            
+
+
         </script>
-		
-		<canvas id="canvas" width="500" height="500">
-			Update your browser!
-		</canvas>
-        
     </body>
 </html>
